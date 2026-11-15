@@ -180,8 +180,7 @@ a {
   gap: 16px;
 }
 
-.header-links a,
-.footer-inner a {
+.header-links a {
   position: relative;
   color: #dedede;
   font-size: 14px;
@@ -190,35 +189,10 @@ a {
   transition: color 0.3s ease;
 }
 
-.header-links a:hover,
-.footer-inner a:hover {
+.header-links a:hover {
   color: #fff;
 }
 
-.header-links .email-link::after,
-.footer-inner .contact-link::after {
-  position: absolute;
-  right: 0;
-  bottom: -3px;
-  left: 0;
-  height: 1px;
-  background: currentColor;
-  content: "";
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.header-links .email-link:hover::after,
-.footer-inner .contact-link:hover::after {
-  transform: scaleX(1);
-}
-
-.header-links a span {
-  display: inline-block;
-  margin-left: 3px;
-  color: #aaa;
-}
 
 .header-links .github-link {
   width: 24px;

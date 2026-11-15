@@ -2,9 +2,24 @@ const revealTargets = document.querySelectorAll("[data-reveal]");
 const siteHeader = document.querySelector(".site-header");
 
 document.addEventListener("DOMContentLoaded", () => {
+  const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+  const shouldActivateProjects = currentPage === "projects.html" || /^project-.+\.html$/.test(currentPage);
+
   document.querySelectorAll(".site-nav").forEach((nav) => {
     const pill = nav.querySelector(".nav-pill");
     const links = nav.querySelectorAll(".nav-link");
+    if (shouldActivateProjects) {
+      links.forEach((link) => {
+        const isProjectsLink = link.textContent.trim() === "Projects";
+        link.classList.toggle("active", isProjectsLink);
+        if (isProjectsLink) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    }
+
     const activeLink = nav.querySelector(".nav-link.active");
     let hoveredLink = null;
 

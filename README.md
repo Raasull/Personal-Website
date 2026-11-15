@@ -1,30 +1,54 @@
 # Rasul Guliyev — Personal Portfolio
 
-A minimalist, dark-themed portfolio for the SITE 1101 university project. Built with plain HTML, CSS, and vanilla JavaScript; no external libraries or build tools are required.
+A minimalist, dark-themed portfolio for sharing my background and selected SITE 1101 work. The site is built with semantic HTML, CSS, and vanilla JavaScript, with no build step or runtime dependencies.
+
+## Live site
+
+[https://raasull.github.io/rguliyev/](https://raasull.github.io/rguliyev/)
 
 ## Pages
 
-- `index.html` — introduction and selected work
-- `about.html` — background, interests, skills, and the interactive field-notes quest
-- `projects.html` — project descriptions and details
+- `index.html` — introduction and featured projects
+- `about.html` — background, interests, skills, and an interactive field-notes quest
+- `projects.html` — overview of the three selected projects
+- `project-1.html`, `project-2.html`, `project-3.html` — individual project details
+
+## Project structure
+
+```text
+.
+├── index.html
+├── about.html
+├── projects.html
+├── project-1.html
+├── project-2.html
+├── project-3.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+└── assets/
+    └── images/
+        ├── github.svg
+        └── profile.jpg
+```
+
+`profile.jpg` is a clearly marked abstract placeholder because no portrait was provided. Replace it with a personal photo while keeping the same filename, or update the image path in `index.html`.
 
 ## Run locally
 
-Open `index.html` in a browser, or start a local server from this folder:
+From the repository root, start a local server:
 
-```powershell
-python -m http.server 8000
+```sh
+python3 -m http.server 8000
 ```
 
-Then visit <http://localhost:8000>.
+Then open <http://localhost:8000>.
 
 ## Interactions
 
-- **Sticky navbar:** The header gains a translucent, blurred background when scrolling. Its active-link pill slides to the hovered or keyboard-focused link.
-- **Smooth scrolling:** In-page anchor navigation uses native CSS scrolling.
-- **Scroll reveals:** Elements with `data-reveal` fade and rise into view using `IntersectionObserver`.
-- **Field-notes quest:** Expand all three notes on the About page to complete the quest. The notes remain usable without JavaScript.
-- **Reduced motion:** Scroll and transition animations respect the system's reduced-motion preference.
-- **Overflow stability:** The page reserves scrollbar space and clips horizontal overflow while retaining the sticky header.
-
-Shared styling lives in `style.css`; lightweight interactions live in `script.js`, loaded with `defer` on each page.
+- The sticky navigation pill aligns to the current page before it becomes visible, then follows hover and keyboard focus.
+- Project cards link directly to their detail pages.
+- The About page's field notes reveal additional details and track exploration progress.
+- Scroll reveals and transitions respect reduced-motion preferences.
+- Shared page styling and interactions live in `css/style.css` and `js/script.js`.

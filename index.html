@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rasul Guliyev | Home</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body class="home-page">
 
@@ -22,9 +25,8 @@
     </nav>
     <div class="header-links">
       <a class="github-link" href="https://github.com/Raasull/rguliyev" aria-label="GitHub repository" target="_blank" rel="noopener noreferrer">
-        <img src="images/github.png" alt="">
+        <img src="assets/images/github.svg" alt="">
       </a>
-      <a class="email-link" href="mailto:guliyevrasul77@gmail.com">Email <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
@@ -37,32 +39,38 @@
         <span class="window-mark">+</span>
       </div>
       <div class="hero-content">
-        <div class="hero-title-wrap">
-          <p class="eyebrow">Personal portfolio · 2026</p>
-          <h1>Hi, I'm Rasul.<br>I <span>build, learn</span><br>&amp; explore.</h1>
+        <div class="hero-copy">
+          <div class="hero-title-wrap">
+            <p class="eyebrow">Personal portfolio · 2026</p>
+            <h1>Hi, I'm Rasul.<br>I <span>build, learn</span><br>&amp; explore.</h1>
+          </div>
+          <p class="hero-summary">Student at ADA University.<br>Learning through code, robotics, and hands-on projects.</p>
         </div>
-        <p class="hero-summary">Student at ADA University.<br>Learning through code, robotics, and hands-on projects.</p>
+        <figure class="profile-frame" data-reveal>
+          <img class="profile-photo" src="assets/images/profile.jpg" alt="Abstract placeholder artwork for a profile portrait" width="720" height="900">
+          <span class="profile-monogram" aria-hidden="true">RG</span>
+          <figcaption><span>PROFILE IMAGE SLOT</span><span>ADA UNIVERSITY</span></figcaption>
+        </figure>
       </div>
-      <a class="scroll-cue" href="#work" aria-label="Scroll to selected work">↓</a>
     </section>
 
-    <section id="work" class="work-section" data-reveal>
+    <section id="featured-projects" class="work-section" data-reveal>
       <div class="section-heading">
-        <p class="eyebrow">Selected work <span>2026</span></p>
+        <p class="eyebrow">Featured projects <span>2026</span></p>
         <a class="text-link" href="projects.html">View all projects <span aria-hidden="true">↗</span></a>
       </div>
       <div class="work-list">
-        <a class="work-card work-one" href="projects.html#project-one" data-reveal>
+        <a class="work-card work-one" href="project-1.html" data-reveal>
           <span class="work-image" aria-hidden="true"><span class="work-art art-one">01</span></span>
           <span class="work-caption"><span><strong>Project 1</strong><small>Course project</small></span><span class="work-arrow" aria-hidden="true">↗</span></span>
         </a>
-        <a class="work-card work-two" href="projects.html#hour-of-code" data-reveal>
+        <a class="work-card work-two" href="project-2.html" data-reveal>
           <span class="work-image" aria-hidden="true"><span class="work-art art-two">&lt;/&gt;</span></span>
-          <span class="work-caption"><span><strong>Hour of Code</strong><small>Coding activity</small></span><span class="work-arrow" aria-hidden="true">↗</span></span>
+          <span class="work-caption"><span><strong>Project 2: Hour of Code</strong><small>Coding activity</small></span><span class="work-arrow" aria-hidden="true">↗</span></span>
         </a>
-        <a class="work-card work-three" href="projects.html#robotics" data-reveal>
+        <a class="work-card work-three" href="project-3.html" data-reveal>
           <span class="work-image" aria-hidden="true"><span class="work-art art-three">R</span></span>
-          <span class="work-caption"><span><strong>Robotics</strong><small>Robotics project</small></span><span class="work-arrow" aria-hidden="true">↗</span></span>
+          <span class="work-caption"><span><strong>Project 3: Robotics</strong><small>Robotics project</small></span><span class="work-arrow" aria-hidden="true">↗</span></span>
         </a>
       </div>
     </section>
@@ -72,7 +80,6 @@
     <div class="footer-inner">
       <span>&copy; 2026 Rasul Guliyev</span>
       <span>SITE 1101 · ADA University</span>
-      <a class="contact-link" href="mailto:guliyevrasul77@gmail.com">Get in contact ↗</a>
     </div>
   </footer>
 
