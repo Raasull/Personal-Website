@@ -24,82 +24,147 @@
       <a class="nav-link" href="projects.html#projects-intro">Projects</a>
     </nav>
     <div class="header-links">
-      <a class="github-link" href="https://github.com/Raasull/rguliyev" aria-label="GitHub repository" target="_blank" rel="noopener noreferrer">
+      <a class="github-link" href="https://github.com/Raasull/Personal-Website" aria-label="GitHub repository" target="_blank" rel="noopener noreferrer">
         <img src="assets/images/github.svg" alt="">
       </a>
     </div>
   </header>
 
   <main class="page-shell info-shell">
-    <section id="about-intro" class="page-heading" data-reveal>
-      <p class="eyebrow">A little more about me</p>
-      <h1>Info<span class="heading-period">.</span></h1>
-      <p class="info-intro">I’m a student at ADA University exploring how software, design, and real-world problem solving can come together in thoughtful projects.</p>
+    <section id="about-intro" class="page-heading signal-intro" data-reveal>
+      <p class="eyebrow">About / Resume · Live receiver</p>
+      <h1>Signal Frequency Tuner<span class="heading-period">.</span></h1>
+      <p class="info-intro">Tune across the dial to explore what I’m studying, building, and learning at ADA University.</p>
     </section>
 
-    <section class="info-layout">
-      <div class="info-label">
-        <p class="eyebrow">Background</p>
-      </div>
-      <article class="info-copy" id="background" data-reveal>
-        <h2>Where it starts</h2>
-        <p>I’m currently studying in a tech-focused environment where I’ve been learning how to turn ideas into practical digital experiences. My background is rooted in curiosity: I enjoy understanding how systems work and then building simpler, cleaner ways to make them useful.</p>
-      </article>
-      <div class="info-label">
-        <p class="eyebrow">Interests</p>
-      </div>
-      <article class="info-copy" id="interests" data-reveal>
-        <h2>What I'm curious about</h2>
-        <p>I’m especially interested in web development, robotics, and creative problem solving. Outside the classroom, I enjoy learning by making, whether that means experimenting with code, exploring new tools, or building small ideas that become real projects.</p>
-      </article>
-      <div class="info-label">
-        <p class="eyebrow">Currently</p>
-      </div>
-      <article class="info-copy" id="learning-and-goals" data-reveal>
-        <h2>What I'm learning</h2>
-        <p>Right now, I’m strengthening my understanding of front-end development, user experience, and the process of turning a concept into something clear and dependable. I want to keep growing through practical work and continue exploring areas where technology can create impact.</p>
-      </article>
-      <div class="info-label">
-        <p class="eyebrow">Skills</p>
-      </div>
-      <article class="info-copy" id="skills" data-reveal>
-        <h2>Things I work with</h2>
-        <ul class="skill-list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>Problem solving</li>
-          <li>Project-based learning</li>
-        </ul>
-      </article>
-    </section>
+    <section class="frequency-experience" data-frequency-tuner aria-labelledby="receiver-title">
+      <div class="receiver-console" data-reveal>
+        <header class="receiver-header">
+          <div class="receiver-identity">
+            <span class="receiver-mark" aria-hidden="true">∿</span>
+            <div>
+              <p class="receiver-kicker">RG / FIELD RECEIVER 01</p>
+              <h2 id="receiver-title">Signal frequency tuner</h2>
+            </div>
+          </div>
+          <div class="receiver-actions">
+            <button class="receiver-button decrypt-all-button" type="button" data-decrypt-all aria-pressed="false">
+              Decrypt All / Standard View
+            </button>
+            <button class="receiver-button audio-toggle" type="button" data-audio-toggle aria-pressed="false">
+              AUDIO: OFF
+            </button>
+          </div>
+        </header>
 
-    <section class="curiosity-quest" data-quest data-reveal aria-labelledby="quest-title">
-      <div class="quest-heading">
-        <p class="eyebrow">A tiny field quest</p>
-        <h2 id="quest-title">Three curiosities. One little unlock.</h2>
-        <p>Open each field note to explore a few things that make learning through projects interesting.</p>
+        <div class="receiver-readouts">
+          <div class="receiver-readout">
+            <span class="readout-label">FREQ</span>
+            <output class="frequency-value" data-frequency-readout for="frequency-slider">88.0 MHz</output>
+          </div>
+          <div class="receiver-readout">
+            <span class="readout-label">SIGNALS LOCKED</span>
+            <output class="lock-count" data-lock-count aria-live="polite">0/4</output>
+          </div>
+          <div class="receiver-state" data-signal-state aria-live="polite">
+            <span class="state-light" aria-hidden="true"></span>
+            <span data-signal-label>SIGNAL: NOISY</span>
+          </div>
+        </div>
+
+        <div class="receiver-progress" role="progressbar" aria-label="Frequencies synchronized" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0" data-frequency-progress>
+          <span data-frequency-progress-fill></span>
+        </div>
+
+        <div class="scope-frame">
+          <canvas class="signal-scope" data-signal-scope width="900" height="160" role="img" aria-label="Live oscilloscope waveform showing the current signal quality">
+            A live waveform visualizes signal clarity as you tune the frequency.
+          </canvas>
+          <span class="scope-scale scope-scale-top" aria-hidden="true">+1.0</span>
+          <span class="scope-scale scope-scale-bottom" aria-hidden="true">−1.0</span>
+        </div>
+
+        <div class="tuner-controls">
+          <div class="tuner-caption">
+            <label for="frequency-slider">MANUAL TUNING</label>
+            <span>Drag · tap a marker · or use ← →</span>
+          </div>
+          <div class="frequency-track">
+            <div class="frequency-ticks" aria-hidden="true"></div>
+            <input id="frequency-slider" class="frequency-slider" type="range" min="88" max="108" step="0.1" value="88" aria-label="Tune frequency from 88.0 to 108.0 megahertz" aria-valuetext="88.0 megahertz">
+            <div class="frequency-notches" aria-label="Profile frequencies">
+              <button class="frequency-notch" type="button" style="--notch-position: 17%" data-target-frequency="91.4" aria-label="Tune to 91.4 megahertz, background and education">
+                <span class="notch-pin" aria-hidden="true"></span><span class="notch-label">91.4</span>
+              </button>
+              <button class="frequency-notch" type="button" style="--notch-position: 39%" data-target-frequency="95.8" aria-label="Tune to 95.8 megahertz, technical toolkit">
+                <span class="notch-pin" aria-hidden="true"></span><span class="notch-label">95.8</span>
+              </button>
+              <button class="frequency-notch" type="button" style="--notch-position: 66%" data-target-frequency="101.2" aria-label="Tune to 101.2 megahertz, Hour of Code">
+                <span class="notch-pin" aria-hidden="true"></span><span class="notch-label">101.2</span>
+              </button>
+              <button class="frequency-notch" type="button" style="--notch-position: 88%" data-target-frequency="105.6" aria-label="Tune to 105.6 megahertz, robotics and hardware">
+                <span class="notch-pin" aria-hidden="true"></span><span class="notch-label">105.6</span>
+              </button>
+            </div>
+          </div>
+          <div class="frequency-range" aria-hidden="true"><span>88.0 MHz</span><span>108.0 MHz</span></div>
+        </div>
       </div>
-      <div class="quest-progress">
-        <p data-quest-status aria-live="polite">0 of 3 field notes discovered.</p>
-        <progress data-quest-progress max="3" value="0" aria-label="Field notes discovered">0 of 3</progress>
+
+      <div class="profile-grid" aria-label="Profile signal channels">
+        <article class="profile-card" data-profile-card data-profile-frequency="91.4">
+          <header class="profile-card-header">
+            <span>CH 01 // BACKGROUND &amp; EDUCATION</span>
+            <span>91.4 MHz</span>
+          </header>
+          <div class="profile-card-content" aria-hidden="true">
+            <h2>Learning to see the whole system.</h2>
+            <p>I’m an Information Systems student at ADA University (SITE 1101). I’m building a foundation in computing and systems thinking, with an interest in clean, thoughtful web architecture.</p>
+          </div>
+          <p class="decrypt-badge" data-decrypt-badge>[ TUNE TO 91.4 MHz TO DECRYPT ]</p>
+        </article>
+
+        <article class="profile-card" data-profile-card data-profile-frequency="95.8">
+          <header class="profile-card-header">
+            <span>CH 02 // TECHNICAL TOOLKIT</span>
+            <span>95.8 MHz</span>
+          </header>
+          <div class="profile-card-content" aria-hidden="true">
+            <h2>Small, dependable building blocks.</h2>
+            <p>I work with semantic HTML5, modern CSS3, and vanilla JavaScript. I use Git for version control and GitHub Pages to publish projects and share what I’ve made.</p>
+          </div>
+          <p class="decrypt-badge" data-decrypt-badge>[ TUNE TO 95.8 MHz TO DECRYPT ]</p>
+        </article>
+
+        <article class="profile-card" data-profile-card data-profile-frequency="101.2">
+          <header class="profile-card-header">
+            <span>CH 03 // HOUR OF CODE</span>
+            <span>101.2 MHz</span>
+          </header>
+          <div class="profile-card-content" aria-hidden="true">
+            <h2>Making programming feel approachable.</h2>
+            <p>I conducted and facilitated an Hour of Code session, introducing students to core programming logic and breaking problem-solving into clear, manageable steps.</p>
+          </div>
+          <p class="decrypt-badge" data-decrypt-badge>[ TUNE TO 101.2 MHz TO DECRYPT ]</p>
+        </article>
+
+        <article class="profile-card" data-profile-card data-profile-frequency="105.6">
+          <header class="profile-card-header">
+            <span>CH 04 // ROBOTICS &amp; HARDWARE</span>
+            <span>105.6 MHz</span>
+          </header>
+          <div class="profile-card-content" aria-hidden="true">
+            <h2>Code that moves in the real world.</h2>
+            <p>I’ve built and programmed hands-on robotics systems, connecting software algorithms with physical sensors and movement, then learning from each test along the way.</p>
+          </div>
+          <p class="decrypt-badge" data-decrypt-badge>[ TUNE TO 105.6 MHz TO DECRYPT ]</p>
+        </article>
       </div>
-      <div class="quest-list">
-        <details class="quest-item" data-quest-item>
-          <summary><span class="quest-index">01</span><span>Code</span><span class="quest-toggle" aria-hidden="true"></span></summary>
-          <p>Break a big question into small steps, then use code to test an idea and make it real.</p>
-        </details>
-        <details class="quest-item" data-quest-item>
-          <summary><span class="quest-index">02</span><span>Robotics</span><span class="quest-toggle" aria-hidden="true"></span></summary>
-          <p>Connect software with the physical world and learn from what happens when the two meet.</p>
-        </details>
-        <details class="quest-item" data-quest-item>
-          <summary><span class="quest-index">03</span><span>Hands-on projects</span><span class="quest-toggle" aria-hidden="true"></span></summary>
-          <p>Turn curiosity into something you can build, try, improve, and share.</p>
-        </details>
+
+      <div class="frequency-complete" data-frequency-complete aria-hidden="true">
+        <span>ALL FREQUENCIES SYNCHRONIZED</span>
+        <a href="projects.html">Explore My Projects <span aria-hidden="true">→</span></a>
       </div>
-      <p class="quest-complete" data-quest-complete hidden>Curiosity explorer unlocked. Thanks for exploring.</p>
     </section>
   </main>
 
