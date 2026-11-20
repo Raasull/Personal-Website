@@ -9,9 +9,9 @@ A minimalist, dark-themed portfolio for sharing my background and selected SITE 
 ## Pages
 
 - `index.html` — introduction and featured projects
-- `about.html` — background and an interactive signal-frequency tuner
+- `about.html` — Information Systems notes and an interactive signal tuner
 - `projects.html` — overview of the three selected projects
-- `project-1.html`, `project-2.html`, `project-3.html` — individual project details
+- `project-1.html`, `project-2.html`, `project-3.html` — engineering logs with prompts for project-specific details
 
 ## Project structure
 
@@ -29,7 +29,6 @@ A minimalist, dark-themed portfolio for sharing my background and selected SITE 
 │   └── script.js
 └── assets/
     └── images/
-        ├── github.svg
         └── profile.jpg
 ```
 
@@ -49,6 +48,7 @@ Then open <http://localhost:8000>.
 
 - The sticky navigation pill aligns to the current page before it becomes visible, then follows hover and keyboard focus.
 - Project cards link directly to their detail pages.
-- The About page's frequency tuner reveals profile details as you lock onto signals.
+- The About page's tuner reveals profile details as you lock onto four frequencies.
+- Project detail pages use 16:9 image frames ready for project screenshots or photos.
 - Scroll reveals and transitions respect reduced-motion preferences.
 - Shared page styling and interactions live in `css/style.css` and `js/script.js`.
