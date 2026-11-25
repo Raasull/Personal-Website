@@ -202,3 +202,37 @@ Add this chat to the Markdown export.
 ### Assistant
 
 Appended the follow-up conversation to `chat-export.md`, including the portfolio upgrade, repository migration, and GitHub Pages publishing updates.
+
+## Recent conversation
+
+### User
+
+Requested an editorial rewrite of the portfolio: remove generic AI-style copy, add a Baku status card, rebuild the three project pages as engineering logs with personal-detail prompts, standardize the header and footer, use an inline GitHub icon, and check responsive behavior.
+
+### Assistant
+
+Updated the home, About, projects, and project detail pages with direct student-focused copy and explicit placeholders for unknown project facts. Added the status card and 16:9 media frames, updated the dark background and profile-photo styling, and made the GitHub icon inline across all pages. Verified local links, privacy, navigation state, the About tuner, and mobile overflow.
+
+### User
+
+Make a commit.
+
+### Assistant
+
+Committed the changes as `bccb3c1` (`Polish portfolio copy and project logs`).
+
+### User
+
+Push it.
+
+### Assistant
+
+Pushed `bccb3c1` to `origin/main`; the branch was up to date.
+
+### User
+
+Add the chat to the Markdown file.
+
+### Assistant
+
+Appended this conversation to `chat-export.md`, preserving the existing export.
